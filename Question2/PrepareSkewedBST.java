@@ -5,7 +5,6 @@ public class PrepareSkewedBST {
 	Node root;
 	Node prevNode=null;
 	Node headNode=null;
-	int cnt=0;
 
 	//Insert node in the BST
 		public void insertNode(int key) {
@@ -55,11 +54,10 @@ public class PrepareSkewedBST {
 	}
 	
 	public void printSkewedTree(Node headNode) {
-		if(headNode==null || cnt>0)
+		if(headNode==null)
 			return;
 		System.out.println(headNode.data+" ");
 		printSkewedTree(headNode.right);
-		cnt++;
 	}
 }
 
